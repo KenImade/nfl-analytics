@@ -1,0 +1,13 @@
+.venv
+
+bulk/
+chapter6/
+chapter7/
+
+README.md
+
+.gitignore
+
+*.DS_Store/
+
+**/__pycache__
