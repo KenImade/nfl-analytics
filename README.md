@@ -16,11 +16,11 @@ Thanks for using the Sports World Central API. This is your one-stop-shop for ac
 
 ## Public API
 
-Our API is hosted at [API URL]/([API URL]/).
+Our API is hosted at [https://nfl-analytics-api.onrender.com]/([https://nfl-analytics-api.onrender.com/]/).
 
-You can access the interactive documentation at [[API URL]/docs]([API URL]/docs).
+You can access the interactive documentation at [[https://nfl-analytics-api.onrender.com]/docs]([https://nfl-analytics-api.onrender.com/]/docs).
 
-You can view the OpenAPI Specification (OAS) file at [[API URL]/openapi.json]([API URL]/openapi.json).
+You can view the OpenAPI Specification (OAS) file at [[https://nfl-analytics-api.onrender.com]/openapi.json]([https://nfl-analytics-api.onrender.com]/openapi.json).
 
 ## Getting Started
 
