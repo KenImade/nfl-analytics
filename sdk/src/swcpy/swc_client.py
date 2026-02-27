@@ -23,7 +23,7 @@ class SWCClient:
     """
 
     BULK_FILE_BASE_URL = (
-        "https://raw.githubusercontent.com/KenImade" + "/portfolio-project/main/bulk/"
+        "https://raw.githubusercontent.com/KenImade" + "/nfl-analytics/main/bulk/"
     )
 
     def __init__(self, input_config: config.SWCConfig):
