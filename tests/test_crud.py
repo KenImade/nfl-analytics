@@ -5,8 +5,8 @@ Testing SQLAlchemy Helper Functions
 import pytest
 from datetime import date
 
-from app.db import crud
-from app.db.database import SessionLocal
+from api.db import crud
+from api.db.database import SessionLocal
 
 # use a test date of 4/1/2024 to test the min_last_changed_date.
 test_date = date(2024, 4, 1)

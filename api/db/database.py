@@ -4,7 +4,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-from app.settings import SQLALCHEMY_DATABASE_URL
+from api.settings import SQLALCHEMY_DATABASE_URL
 
 
 engine = create_engine(

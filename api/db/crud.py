@@ -4,7 +4,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy.orm import joinedload
 from datetime import date
 
-from app.db import models
+from api.db import models
 
 
 def get_player(db: Session, player_id: int):
@@ -146,6 +146,15 @@ def get_teams(
     return query.offset(skip).limit(limit).all()
 
 
+def get_weeks(
+    db: Session, skip: int = 0, limit: int = 100, min_last_changed_date: date = None
+):
+    query = db.query(models.Week)
+    if min_last_changed_date:
+        query = query.filter(models.Week.last_changed_date >= min_last_changed_date)
+    return query.offset(skip).limit(limit).all()
+
+
 # analytics queries
 def get_player_count(db: Session):
     """
@@ -177,4 +186,9 @@ def get_league_count(db: Session):
     :type db: Session
     """
     query = db.query(models.League)
+    return query.count()
+
+
+def get_week_count(db: Session):
+    query = db.query(models.Week)
     return query.count()

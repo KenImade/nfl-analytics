@@ -2,8 +2,8 @@
 
 from fastapi import FastAPI
 
-from app.settings import API_VERSION, API_DESCRIPTION, API_TITLE
-from app.routes import router
+from api.settings import API_VERSION, API_DESCRIPTION, API_TITLE
+from api.routes import router
 
 
 app = FastAPI(description=API_DESCRIPTION, title=API_TITLE, version=API_VERSION)
