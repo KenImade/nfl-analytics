@@ -41,6 +41,7 @@ class League(Base):
     league_id = Column(Integer, primary_key=True, index=True)
     league_name = Column(String, nullable=False)
     scoring_type = Column(String, nullable=False)
+    league_size = Column(Integer, nullable=False)
     last_changed_date = Column(Date, nullable=False)
 
     teams = relationship("Team", back_populates="league")

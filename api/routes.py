@@ -206,7 +206,7 @@ def get_count(db: Session = Depends(get_db)):
 @router.get(
     "/weeks/",
     response_model=list[schemas.Week],
-    summary="Get all the SWC weeks that meet all the parameters you sent with your request"
+    summary="Get all the SWC weeks that meet all the parameters you sent with your request",
     description="""Use this endpoint to get a list of SWC weeks. You can use the parameters to filter down the weeks in the list. You use the skip and limit to perform pagination of the API.""",
     response_description="A list of weeks in SWC fantasy football.",
     operation_id="v0_get_weeks",
@@ -214,8 +214,7 @@ def get_count(db: Session = Depends(get_db)):
 )
 def read_weeks(
     skip: int = Query(
-        0,
-        description="The number of items to skip at the beginning of your API call."
+        0, description="The number of items to skip at the beginning of your API call."
     ),
     limit: int = Query(
         100, description="The number of records to return after the skipped records."
@@ -227,9 +226,6 @@ def read_weeks(
     db: Session = Depends(get_db),
 ):
     weeks = crud.get_weeks(
-        db,
-        skip=skip,
-        limit=limit,
-        min_last_changed_date=minimum_last_changed_date
+        db, skip=skip, limit=limit, min_last_changed_date=minimum_last_changed_date
     )
     return weeks
