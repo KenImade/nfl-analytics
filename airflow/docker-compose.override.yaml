@@ -1,0 +1,5 @@
+x-airflow-common:
+  &ariflow-common
+  environment:
+    &airflow-common-env
+    AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
